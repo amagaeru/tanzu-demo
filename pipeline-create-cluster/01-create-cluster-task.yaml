@@ -1,0 +1,7 @@
+---
+platform: linux
+inputs:
+  - name: resource-tanzu
+  - name: work-image
+run:
+  path: resource-tanzu/pipeline-create-cluster/01-create-cluster-task.sh

@@ -4,7 +4,7 @@ resources:
   - name: work-image
     type: registry-image
     source:
-      repository: tiwafuchi/ubuntu_tanzu
+      repository: tiwafuchi/ubuntu-tanzu
   - name: resource-tanzu
     type: git
     source:
@@ -18,7 +18,7 @@ jobs:
         trigger: true
       - get: work-image
       - task: create-cluster
-        file: resource-tanzu/pipeline-create-cluster/01-create-cluster-task.yml
+        file: resource-tanzu/pipeline-create-cluster/01-create-cluster-task.yaml
         image: work-image
   - name: job-deploy-monitor
     public: true
@@ -29,7 +29,7 @@ jobs:
       passed: [job-create-cluster]
       trigger: true
     - task: deploy-monitor
-      file: resource-tanzu/pipeline-create-cluster/02-deploy-monitor-task.yml
+      file: resource-tanzu/pipeline-create-cluster/02-deploy-monitor-task.yaml
       image: work-image
   - name: job-deploy-logs
     public: true
@@ -40,7 +40,7 @@ jobs:
       passed: [job-deploy-monitor]
       trigger: true
     - task: deploy-logs
-      file: resource-tanzu/pipeline-create-cluster/03-deploy-logs-task.yml
+      file: resource-tanzu/pipeline-create-cluster/03-deploy-logs-task.ymaml
       image: work-image
   - name: job-deploy-velero
     public: true
@@ -51,5 +51,5 @@ jobs:
       passed: [job-deploy-logs]
       trigger: true
     - task: deploy-velero
-      file: resource-tanzu/pipelinecreatecluster/04-deploy-velero-task.yml
+      file: resource-tanzu/pipelinecreatecluster/04-deploy-velero-task.yaml
       image: work-image
