@@ -12,11 +12,13 @@ spawn env LANG=C kubectl vsphere login --vsphere-username administrator@vsphere.
 expect \"Password:\"
 send \"${PW}\n\"
 expect \"$\"
+spawn env LANG=C kubectl config use-context w03dev01
+expect \"$\"
 exit 0
 "
 
 # 2. Create TKC
-echo "\n\n$ cd resource-tanzu/tanzu_clusters"
+echo "\n\n$ cd resource-tanzu/tanzu-clusters"
 cd resource-tanzu/tanzu-clusters
 echo "\n\n$ Create Tanzu Kuberentes Cluster"
 kubectl apply -f cluster-manifest-01.yaml
