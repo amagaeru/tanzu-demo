@@ -5,7 +5,7 @@ metadata:
   namespace: w03dev01
 spec:
   distribution:
-    version: v1.17.11
+    version: v1.17.8
   topology:
     controlPlane:
       count: 1
