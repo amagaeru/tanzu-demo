@@ -39,7 +39,7 @@ jobs:
       passed: [job-deploy-monitor]
       trigger: true
     - task: deploy-logs
-      file: resource-tanzu/pipeline-create-cluster/03-deploy-logs-task.ymaml
+      file: resource-tanzu/pipeline-create-cluster/03-deploy-logs-task.yaml
       image: work-image
   - name: job-deploy-velero
     public: true
