@@ -1,0 +1,8 @@
+---
+platform: linux
+inputs:
+  - name: resource-tanzu
+  - name: work-image
+run:
+  path: sh
+  args: ["./resource-tanzu/pipeline-create-cluster/04-deploy-velero-task.sh"]
