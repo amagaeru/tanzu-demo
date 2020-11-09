@@ -12,7 +12,7 @@ spec:
       class: best-effort-xsmall
       storageClass: vsan-default-storage-policy
     workers:
-      count: 2
+      count: 5
       class: best-effort-xsmall
       storageClass: vsan-default-storage-policy
   settings:
