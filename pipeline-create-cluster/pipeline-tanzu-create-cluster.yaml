@@ -50,5 +50,5 @@ jobs:
       passed: [job-deploy-logs]
       trigger: true
     - task: deploy-velero
-      file: resource-tanzu/pipelinecreatecluster/04-deploy-velero-task.yaml
+      file: resource-tanzu/pipeline-create-cluster/04-deploy-velero-task.yaml
       image: work-image
