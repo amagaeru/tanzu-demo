@@ -5,6 +5,7 @@ metadata:
   namespace: w03dev01
 spec:
   distribution:
+    fullVersion: null
     version: v1.17.8
   topology:
     controlPlane:
