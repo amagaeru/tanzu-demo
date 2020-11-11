@@ -6,7 +6,7 @@ metadata:
 spec:
   distribution:
     fullVersion: null
-    version: v1.17.8
+    version: v1.18.5
   topology:
     controlPlane:
       count: 1
